@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mustafa's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <!-- <h1 class="logonav">Mustafa Ahmed</h1> -->
+                <img src="Images/Logo3.png" class="Logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#About">About Me</a></li>
+                    <!-- <li><a href="#">Skills</a></li> -->
+                    <li><a href="#Resume">Resume</a></li>
+                    <li><a href="#contact-left">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Software Engineer</p>
+                <h1>Hello! <span>I'm Mustafa</span><br>from Karachi</h1>
+            </div>
+        </div>
+    </div>
+    <div id="About">
+        <div class="container">
+
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/mustafa.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, sit dolor? Expedita et nihil
+                        autem necessitatibus debitis voluptatem molestias modi aut quod recusandae. Necessitatibus,
+                        aspernatur nisi corporis maxime harum delectus cum adipisci aliquam quo pariatur, reprehenderit
+                        deserunt laboriosam debitis ex saepe? Quod exercitationem laboriosam vero at maiores nesciunt
+                        deserunt aspernatur maxime cupiditate similique autem, quo ipsa sequi sunt, ex sit.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI Design</span><br>Designing Web App Interfaces</br></li>
+                            <li><span>Web Development</span><br>Developing Web Applications</br></li>
+                            <li><span>Data Analytics</span><br>Data-driven decision making</br></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2024 - Current</span><br>Intern at Syntelica</br></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020-2025</span><br>BSCS from SZABIST Karachi</br></li>
+                            <li><span>2018-2020</span><br>A levels from Whales College</br></li>
+                            <li><span>2015-2018</span><br>O levels from WHSS</br></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- -------------------resume------------------ -->
+    <div id="Resume">
+        <div class="container">
+            <h1 class="sub-title">Here's <span class="my">My </span>Resume <i class="fas fa-file-alt"></i> </h1>
+            <div class="row">
+                <div class="resume-preview">
+                    <iframe src="mycv.pdf" frameborder="1"></iframe>
+                </div>
+                <div class="resume-download">
+                    <!-- <p>Download my resume by clicking the button below:</p> -->
+                    <a href="mycv.pdf" class="btn-download" download>Download PDF</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------------contact me------------- -->
+    <div class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title" style="  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope" style=" text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);"></i> mustafaahmedkhan121000@gmail.com</p>
+                    <p><i class="fa-solid fa-phone" style=" text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);"></i> +92 322-6046380</p>
+                    <div class="social-icons">
+                        <a href="https://www.kaggle.com/mustafaahmedkhan">
+                            <!-- <img src="facebook-brands-solid.svg" alt="Facebook SVG" class="svgicons" /> -->
+                            <!-- <i class="fa-brands fa-facebook"></i>  -->
+                            <i class="fa-brands fa-kaggle"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa-brands fa-github"></i>
+                            <!-- <img src="github-brands-solid.svg" alt="github SVG" class="svgicons" /> -->
+                        </a>
+                        <a href="">
+                            <!-- <img src="linkedin-brands-solid.svg" alt="github SVG" class="svgicons" /> -->
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Please enter your message for me"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+
+</body>
+
+</html>
