@@ -187,6 +187,8 @@ nav ul li a:hover::after{
 
 .resume-download {
     flex-basis: 35%;
+    margin-top: 50px;
+    margin-left: 100px;
     text-align: center;
 }
 
